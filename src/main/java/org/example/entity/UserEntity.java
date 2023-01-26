@@ -2,6 +2,7 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @NoArgsConstructor
@@ -14,10 +15,10 @@ import lombok.*;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
     private String phone_number;
     private String password;
     @Enumerated(EnumType.STRING)
-    private UserRole role;
+    private UserRole role=UserRole.USER;
 }

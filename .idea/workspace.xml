@@ -10,13 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1170f7a2-54bb-43a7-ac85-608577e4a9e0" name="Changes" comment="go guys">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/view/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/view/cars.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/view/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/view/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hibernate_crud_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hibernate_crud_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06b6db18-5d13-4c1f-ab57-e220d8292763.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06b6db18-5d13-4c1f-ab57-e220d8292763/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06b6db18-5d13-4c1f-ab57-e220d8292763/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06b6db18-5d13-4c1f-ab57-e220d8292763/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b44327-dd6f-4ed8-822b-8ed40e8d70a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/53b44327-dd6f-4ed8-822b-8ed40e8d70a4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b44327-dd6f-4ed8-822b-8ed40e8d70a4/storage_v2/_src_/database/auth_app.CnNjVQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/53b44327-dd6f-4ed8-822b-8ed40e8d70a4/storage_v2/_src_/database/auth_app.CnNjVQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/servlet-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/servlet-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/CarEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/CarEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/view/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/view/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/view/home.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +41,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
   </component>
   <component name="JpbToolWindowState">
@@ -63,13 +85,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.47931033",
     "spring.configuration.checksum": "24c9553a8a4c42256c305720418488a1",
     "vue.rearranger.settings.migration": "true"
@@ -82,13 +106,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Victus\JAVA\hibernate_crud\web\WEB-INF\view" />
       <recent name="C:\Users\Victus\JAVA\hibernate_crud\web" />
       <recent name="C:\Users\Victus\JAVA\hibernate_crud\web\WEB-INF" />
       <recent name="C:\Users\Victus\JAVA\hibernate_crud\web\view" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="hibernate_crud:Web exploded">
@@ -185,7 +210,8 @@
       <option name="presentableId" value="Default" />
       <updated>1674732690879</updated>
       <workItem from="1674732691991" duration="301000" />
-      <workItem from="1674733047969" duration="1715000" />
+      <workItem from="1674733047969" duration="2272000" />
+      <workItem from="1674735330361" duration="13100000" />
     </task>
     <task id="LOCAL-00001" summary="go guys">
       <created>1674733578609</created>
@@ -194,14 +220,43 @@
       <option name="project" value="LOCAL" />
       <updated>1674733578609</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="go guys">
+      <created>1674734781893</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674734781893</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="go guys" />
     <option name="LAST_COMMIT_MESSAGE" value="go guys" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

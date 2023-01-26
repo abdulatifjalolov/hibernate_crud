@@ -2,7 +2,6 @@
   <artifact type="exploded-war" name="hibernate_crud:Web exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/hibernate_crud_Web_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="hibernate_crud/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="hibernate_crud" />
@@ -53,6 +52,7 @@
           <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="hibernate_crud/web/Web" />
     </root>
   </artifact>
 </component>

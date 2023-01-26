@@ -1,6 +1,9 @@
 package org.example.entity;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.grammars.hql.HqlParser;
+
 import java.sql.Date;
 import java.util.List;
 
@@ -21,7 +24,6 @@ public class CarEntity {
     private String model;
     private String color;
     private Date createdDate;
-    @ManyToMany
-    @ToString.Exclude
-    private List<UserEntity> userEntityList;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private UserEntity userEntity;
 }

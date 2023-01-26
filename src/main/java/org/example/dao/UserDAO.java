@@ -1,7 +1,6 @@
 package org.example.dao;
 
 import lombok.RequiredArgsConstructor;
-import org.example.entity.CarEntity;
 import org.example.entity.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

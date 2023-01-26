@@ -20,13 +20,13 @@ public class CarController {
         return "admin/car";
     }
 
-    @GetMapping("/user/cars")
-    public String getButtonsValue(HttpServletRequest request) {
-        int userId = Integer.parseInt(request.getParameter("userId"));
-        request.setAttribute("carList", carDAO.getList()
-                .stream()
-                .filter(car -> car.getId() == userId)
-                .toList());
-        return "admin/car";
-    }
+//    @GetMapping("/user/cars")
+//    public String getButtonsValue(HttpServletRequest request) {
+//        int userId = Integer.parseInt(request.getParameter("userId"));
+//        request.setAttribute("carList", carDAO.getList()
+//                .stream()
+//                .filter(car -> car.getId() == userId)
+//                .toList());
+//        return "admin/car";
+//    }
 }

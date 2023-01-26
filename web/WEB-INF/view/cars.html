@@ -325,26 +325,21 @@
         </button>
     </nav>
 </div>
-<div class="table-wrapper">
-    <div class="col-sm-2">
-        <h2 th:text="${text}"></h2>
-    </div>
-</div>
 
 <div class="container-xl">
     <div style="padding-top: 50px">
-    <a href="/admin/cars">
-        <button style="background-color: aqua" name="userId" type="submit">
-            ALL CARS
-        </button>
-    </a>
+        <a href="/admin/cars">
+            <button style="background-color: aqua" name="userId" type="submit">
+                ALL CARS
+            </button>
+        </a>
     </div>
     <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2><b>USERS</b></h2>
+                        <h2><b>CARS</b></h2>
                     </div>
                     <div class="col-sm-6">
                     </div>
@@ -354,21 +349,23 @@
                 <thead>
                 <tr>
                     <th>id</th>
+                    <th>color</th>
+                    <th>createddate</th>
+                    <th>model</th>
                     <th>name</th>
-                    <th>password</th>
-                    <th>phone_number</th>
-                    <th>role</th>
+                    <th>price</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="user: ${userList}">
-                    <td th:text="${user.id}"/>
-                    <td th:text="${user.name}"/>
-                    <td th:text="${user.password}"/>
-                    <td th:text="${user.phone_number}"/>
-                    <td th:text="${user.role}"/>
+                <tr th:each="car: ${carList}">
+                    <td th:text="${car.id}"/>
+                    <td th:text="${car.color}"/>
+                    <td th:text="${car.getCreatedDate().toString()}"/>
+                    <td th:text="${car.model}"/>
+                    <td th:text="${car.name}"/>
+                    <td th:text="${car.price}"/>
                     <td>
-                        <form action="/admin/user/cars">  <button name="userId" style="background-color: aqua" type="submit" th:value="${user.id}"> CARS</button> </form>
+                        <form action="/admin/user/list">  <button name="userId" style="background-color: aqua" type="submit" th:value="${car.userEntity.getId()}">OWNER</button> </form>
                     </td>
                 </tr>
                 </tbody>
