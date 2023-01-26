@@ -20,8 +20,9 @@ public class CarEntity {
     private double price;
     private String model;
     private String color;
+
     private Date createdDate;
-    @ManyToMany
+    @ManyToOne
     @ToString.Exclude
-    private List<UserEntity> userEntityList;
+    private UserEntity userEntity;
 }

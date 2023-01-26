@@ -1,12 +1,15 @@
 package org.example.dao;
 import lombok.RequiredArgsConstructor;
 import org.example.entity.CarEntity;
+import org.example.entity.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Repository
 @RequiredArgsConstructor
 public class CarDAO implements BaseDao<CarEntity>{
@@ -36,6 +39,10 @@ public class CarDAO implements BaseDao<CarEntity>{
         List<CarEntity> list = session.createNativeQuery("Select * from cars", CarEntity.class).getResultList();
         closeSession(session);
         return list;
+    }
+    public List<CarEntity> getListByUserId(Integer userId){
+        return  getList().stream().filter(carEntity -> carEntity.getUserEntity().getId()==userId)
+                .collect(Collectors.toList());
     }
 
     @Override
