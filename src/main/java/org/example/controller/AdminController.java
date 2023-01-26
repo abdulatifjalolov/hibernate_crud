@@ -20,6 +20,6 @@ public class AdminController {
             HttpServletRequest request
     ) {
         request.setAttribute("userList", userDAO.getList());
-        return "index";
+        return "home";
     }
 }
