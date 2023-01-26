@@ -20,7 +20,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <bean id="templateResolver"
           class="org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver">
-        <property name="prefix" value="/view/" />
+        <property name="prefix" value="/WEB-INF/view/" />
         <property name="suffix" value=".html" />
         <!-- HTML is the default value, added here for the sake of clarity.          -->
         <property name="templateMode" value="HTML" />
