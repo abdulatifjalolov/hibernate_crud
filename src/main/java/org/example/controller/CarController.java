@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.example.dao.CarDAO;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,16 +15,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CarController {
     private final CarDAO carDAO;
 
-    @PostMapping("/cars")
-    public String getCarList(HttpServletRequest request) {
-        request.setAttribute("carList", carDAO.getList());
+    @GetMapping("/cars")
+    public String getCarList(Model model) {
+        model.addAttribute("carList", carDAO.getList());
         return "admin/car";
     }
 
     @GetMapping("/user/cars")
-    public String getButtonsValue(HttpServletRequest request) {
+    public String getButtonsValue(Model model, HttpServletRequest request) {
         int userId = Integer.parseInt(request.getParameter("userId"));
-        request.setAttribute("carList", carDAO.getList()
+        model.addAttribute("carList", carDAO.getList()
                 .stream()
                 .filter(car -> car.getId() == userId)
                 .toList());

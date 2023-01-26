@@ -1,6 +1,10 @@
 package org.example.entity;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.GenerationTime;
+
 import java.sql.Date;
 import java.util.List;
 
@@ -21,7 +25,6 @@ public class CarEntity {
     private String model;
     private String color;
     private Date createdDate;
-    @ManyToMany
-    @ToString.Exclude
-    private List<UserEntity> userEntityList;
+    @ManyToOne
+    private UserEntity userEntity;
 }

@@ -326,21 +326,20 @@
         </button>
     </nav>
 </div>
+<!-------------->
+<div class="table-wrapper">
+    <div class="col-sm-2">
+        <h2 th:text="${text1}"></h2>
+    </div>
+</div>
 
 <div class="container-xl">
-    <div style="padding-top: 50px">
-    <a href="/admin/cars">
-        <button style="background-color: aqua" name="userId" type="submit">
-            ALL CARS
-        </button>
-    </a>
-    </div>
     <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2><b>USERS</b></h2>
+                        <h2><b>Cars</b></h2>
                     </div>
                     <div class="col-sm-6">
                     </div>
@@ -349,32 +348,55 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>password</th>
-                    <th>phone_number</th>
-                    <th>role</th>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PRICE</th>
+                    <th>MODEL</th>
+                    <th>COLOR</th>
+                    <th>YEAR</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="user: ${userList}">
-                    <td th:text="${user.id}"/>
-                    <td th:text="${user.name}"/>
-                    <td th:text="${user.password}"/>
-                    <td th:text="${user.phone_number}"/>
-                    <td th:text="${user.role}"/>
+                <tr th:each="car: ${carList}">
+                    <td th:text="${car.id}"/>
+                    <td th:text="${car.name}"/>
+                    <td th:text="${car.price}"/>
+                    <td th:text="${car.model}"/>
+                    <td th:text="${car.color}"/>
+                    <td th:text="${car.year.ToString}"/>
                     <td>
-                        <a href="/admin/user/cars">
-                            <button style="background-color: aqua" name="userId" type="submit" th:value="${user.id}">
-                                CARS
+                        <a href="user info">
+                            <button style="background-color: aqua" name="userId" type="submit" th:value="${car.id}">
+                                Owner
                             </button>
                         </a>
                     </td>
                 </tr>
                 </tbody>
             </table>
+            <script type="text/javascript">
+                function respons(id,status) {
+                    let statusC = document.getElementById(id);
+                    let result = "";
+                    fetch('/admin/order/edit-status/' + id+"/"+status).then((res) => {
+                        return res.json()
+                    }).then((data)=>{
+                        result+=data;
+                        console.log(result);
+                        if(result==="true"){
+                            if(status==="ACCEPT"){
+                                statusC.innerHTML = `<b style="color:#28a745;">${status}</b>`;
+                            }else{
+                                statusC.innerHTML = `<b style="color:red;">${status}</b>`;
+                            }
+                        }
+                    })
+                }
+            </script>
         </div>
     </div>
 </div>
+
 </body>
 </html>
